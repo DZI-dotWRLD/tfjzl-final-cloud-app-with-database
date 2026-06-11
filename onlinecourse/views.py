@@ -131,9 +131,9 @@ def show_exam_result(request, course_id, submission_id):
     context={}
     course = get_object_or_404(Course, pk=course_id)
     submission = Submission.objects.get(id=submission_id)
-	choices = submission.choices.all()
+    choices = submission.choices.all()
 
-    total _score = 0
+    total_score = 0
 
     questions = course.question_set.all()  # Assuming course has related questions
 
